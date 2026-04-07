@@ -1,0 +1,47 @@
+package aula;
+import java.util.Scanner;
+import java.text.DecimalFormat;
+public class ex06 {
+
+	public static void main(String[]args) {
+		
+		Scanner sc = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("##.##");
+		/*
+        Uma das maneiras de se conseguir a raiz quadrada de um número é subtrair do número
+        os ímpares consecutivos a partir de 1, até que o resultado da subtração seja menor
+        ou igual a zero.
+
+        O número de vezes que se conseguir fazer a subtração é a raiz quadrada exata
+        (resultado 0) ou aproximada do número (resultado negativo).
+
+		Exemplo:
+		Raiz de 16
+		16 - 1 = 15
+		15 - 3 = 12
+		12 - 5 = 7
+		7 - 7 = 0
+		 */
+		
+		double n = 0;
+		double rz = 0;
+		double imp = 1;
+		
+		System.out.println("Informe um número: ");
+		 n = sc.nextInt();
+		 
+		while(  n > 0) {
+			n = n - imp;
+			 rz++;
+			  imp = imp + 2;
+		}
+		
+		System.out.println("Raízes: " + df.format(rz));
+		
+		
+		
+		
+		
+		
+	}
+}
