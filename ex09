@@ -1,0 +1,66 @@
+package aula;
+
+
+import java.util.Scanner;
+
+public class ex09 {
+
+	public static void main(String[]args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+	
+/*
+9. A série de FETUCCINE é gerada da seguinte forma:
+   Os dois primeiros termos são fornecidos pelo usuário;
+   a partir daí, os termos são gerados com a soma ou subtração
+   dos dois termos anteriores, ou seja:
+
+   Ai = Ai-1 + Ai-2  para i ímpar
+   Ai = Ai-1 - Ai-2  para i par
+
+   Escreva um programa que imprima os 20 primeiros termos
+   da série de FETUCCINE.
+*/
+
+		int v = 0;
+		int v2 = 0;
+		int c = 3;
+		int sm = 0;
+		
+		
+		
+		System.out.println("Informe dois números: \n");
+		System.out.println("Número 1: ");
+		v = sc.nextInt();
+		
+		System.out.println("Número 2: ");
+		v2 = sc.nextInt();
+		
+		System.out.print(v + " " + v2);
+		
+		while(c <= 20) {
+			
+			if(c % 2 != 0) {
+				sm = v + v2;
+			}
+			else {
+				sm = v - v2;
+			}
+			
+			System.out.print(" " + sm);
+			v2 = v;
+			v = sm;
+			c++;
+			}
+		
+			
+		
+		
+		
+	
+		
+		
+		
+	}
+}
