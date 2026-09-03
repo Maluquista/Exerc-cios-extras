@@ -3,7 +3,7 @@ package colegio;
 public class Estudante {
 
     private String nome = "";
-    private String numeroMatricula = "";
+    private int numeroMatricula = 0;
     private int quantidadeCreditos = 0;
 
 
@@ -11,7 +11,7 @@ public class Estudante {
         nome = nomeset;
     }
 
-    public void setNumeroMatricula(String numeroMatriculaset) {
+    public void setNumeroMatricula(int numeroMatriculaset) {
         numeroMatricula = numeroMatriculaset;
     }
 
@@ -22,7 +22,7 @@ public class Estudante {
     public String getNome(){
         return nome;
     }
-    public String getNumeroMatricula(){
+    public int getNumeroMatricula(){
         return numeroMatricula;
     }
     public int getQuantidadeCreditos(){
@@ -30,10 +30,10 @@ public class Estudante {
     }
 
     public String toString(){
-        return "Nome: " + getNome() +
-                "Número de matrícula: " + getNumeroMatricula() +
-                "Quantidade de créditos: " + getQuantidadeCreditos() +
-                "Login: " + getNome() + getNumeroMatricula();
+        return "\nNome: " + getNome() +
+                "\nNúmero de matrícula: " + getNumeroMatricula() +
+                "\nQuantidade de créditos: " + getQuantidadeCreditos() +
+                "\nLogin: " + getNome() + (getNumeroMatricula()%1000);
 
     }
 
