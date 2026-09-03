@@ -14,8 +14,8 @@ public class Sistema {
         estudante02.setNumeroMatricula("579035");
         estudante02.setQuantidadeCreditos(80);
 
-        System.out.println(estudante01.toString);
-        System.out.println(estudante02.toString);
+        System.out.println(estudante01.toString());
+        System.out.println(estudante02.toString());
     }
 
     public static void main(String[] args){
